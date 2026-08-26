@@ -23,7 +23,12 @@ opencode/
 libvirt/
 NVIDIA Corporation/
 LM Studio/
+LM-Studio/
+flutter/
+helm/
+simple-scan/
 balenaEtcher/
+
 
 # ------------------------------------------------------------
 #  SYSTEM & DESKTOP
