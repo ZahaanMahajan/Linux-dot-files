@@ -123,6 +123,8 @@ symbol = " "
 
 [kubernetes]
 symbol = "󱃾 "
+format = '[$symbol$context](bold blue) [(\($namespace\))](bold yellow) '
+disabled = false
 
 [lua]
 symbol = " "

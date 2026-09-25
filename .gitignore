@@ -28,6 +28,13 @@ flutter/
 helm/
 simple-scan/
 balenaEtcher/
+Codex/
+argocd/
+google-chrome/
+sops/
+
+
+
 
 
 # ------------------------------------------------------------
