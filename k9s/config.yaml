@@ -14,7 +14,7 @@ k9s:
     headless: false
     logoless: true
     crumbsless: false
-    splashless: false
+    splashless: true
     reactive: false
     noIcons: false
     invert: false

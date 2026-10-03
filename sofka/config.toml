@@ -1,0 +1,39 @@
+default_namespace = "kube-system"
+default_resource = "deployments"
+readonly = false
+favorite_namespaces = ["kube-system", "monitoring"]
+
+[ui]
+logo = false
+
+[aliases]
+dep = "deployments"
+
+[skin]
+name = "solarized-dark"
+background = false
+
+[skin.colors]
+base      = "#002B36"
+mantle    = "#073642"
+crust     = "#001E26"
+
+text      = "#839496"
+dim       = "#586E75"
+overlay0  = "#657B83"
+overlay1  = "#839496"
+
+red       = "#DC322F"
+maroon    = "#CB4B16"
+peach     = "#CB4B16"
+yellow    = "#B58900"
+green     = "#859900"
+teal      = "#2AA198"
+sapphire  = "#2AA198"
+blue      = "#268BD2"
+lavender  = "#268BD2"
+mauve     = "#6C71C4"
+pink      = "#D33682"
+rosewater = "#EEE8D5"
+
+flamingo  = "#EEE8D5"
