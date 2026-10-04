@@ -9,6 +9,29 @@ return {
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
+		-- Add Helm filetype detection so template files are treated right
+		vim.filetype.add({
+			extension = {
+				yaml = function(path, _)
+					if path:match("/templates/") or path:match("Chart.yaml") then
+						return "helm"
+					end
+					return "yaml"
+				end,
+			},
+		})
+
+		-- Update your yamlls configuration to attach to BOTH normal yaml and helm files
+		vim.lsp.config("yamlls", {
+			filetypes = { "yaml", "helm" }, -- Added "helm" here
+			settings = {
+				yaml = {
+					format = { enable = true, bracketSpacing = false },
+				},
+			},
+		})
+		vim.lsp.enable("yamlls")
+
 		-- Diagnostics config
 		vim.diagnostic.config({
 			virtual_text = false,

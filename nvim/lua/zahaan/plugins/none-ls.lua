@@ -27,7 +27,8 @@ return {
 
 			sources = {
 				formatting.prettierd.with({
-					disabled_filetypes = { "markdown", "md" },
+					-- ADDED "yaml" HERE to stop Prettier from overriding yamlls
+					disabled_filetypes = { "markdown", "md", "yaml" },
 				}),
 
 				formatting.stylua,
@@ -43,11 +44,12 @@ return {
 						group = augroup,
 						buffer = bufnr,
 						callback = function()
+							-- CHANGED FILTER HERE to allow both none-ls and yamlls
 							vim.lsp.buf.format({
 								bufnr = bufnr,
 								timeout_ms = 2000,
 								filter = function(c)
-									return c.name == "null-ls" or c.name == "none-ls"
+									return c.name == "null-ls" or c.name == "none-ls" or c.name == "yamlls"
 								end,
 							})
 						end,
