@@ -33,9 +33,9 @@ argocd/
 google-chrome/
 sops/
 tigervnc/
-
-
-
+nextjs-nodejs/
+turborepo/
+k6/
 
 
 # ------------------------------------------------------------

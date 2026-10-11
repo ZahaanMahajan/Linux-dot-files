@@ -1,6 +1,12 @@
 alias daemonreload='sudo systemctl daemon-reload'
 alias restartkmonad='sudo systemctl restart kmonad'
 
+alias v='vim'
+alias k='kubectl'
+alias t='talosctl'
+
+alias s='sofka'
+
 # ------------------------------------------------------------
 # Toggle terminal + nvim transparency
 # ------------------------------------------------------------

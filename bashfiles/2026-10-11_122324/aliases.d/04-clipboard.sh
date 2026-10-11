@@ -9,6 +9,16 @@ alias paste='xclip -selection clipboard -o'         # paste clipboard to stdout
 alias showclip='xclip -selection clipboard -o'      # show clipboard contents
 alias clearclip='echo -n "" | xclip -selection clipboard && echo "✔ Clipboard cleared"'
 
+copylines() {
+  if [ -n "$2" ] && [ -n "$3" ]; then
+    sed -n "$2,$3p" "$1" | xclip -selection clipboard
+    echo "✔ Copied contents of '$1' to clipboard from line '$2' to '$3')"
+  else
+    xclip -selection clipboard < "$1"
+    echo "✔ Copied contents of '$1' to clipboard)"
+  fi
+}
+
 # ------------------------------------------------------------
 # cpy FILE — copy a file's contents to clipboard
 # ------------------------------------------------------------

@@ -143,5 +143,36 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# opencode
-export PATH=/home/zahaan/.opencode/bin:$PATH
+# Added by LM Studio CLI tool (lms)
+# export PATH="$PATH:/home/zahaan/.lmstudio/bin"
+
+OBSIDIAN="$HOME/Notes/Dev-ops/"
+
+# Talos OS Variables
+
+# Talos Homelab
+export TALOSCONFIG="$HOME/homelab/talos/talosconfig"
+export TALOS_ENDPOINTS="192.168.29.20"
+export TALOS_NODES="192.168.29.20"
+
+# KubeConfig
+export KUBECONFIG="$HOME/.kube/config"
+
+export PATH="$HOME/development/flutter/bin:$PATH"
+
+# SOPS Config Key File
+export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"
+
+# KVM/QEMU Default URI
+export LIBVIRT_DEFAULT_URI=qemu:///system
+
+# Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# JAVA
+export JAVA_HOME=/usr/lib/jvm/java-25-openjdk
+export PATH="$JAVA_HOME/bin:$PATH"
